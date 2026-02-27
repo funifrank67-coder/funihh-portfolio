@@ -1,10 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
-  <!-- Homepage -->
+  <!-- Homepage with images -->
   <url>
     <loc>https://funifrank67-coder.github.io/funihh-portfolio/</loc>
     <priority>1.0</priority>
+
+    <!-- Images on homepage -->
+    <image:image>
+      <image:loc>https://funifrank67-coder.github.io/funihh-portfolio/images/profile.jpeg</image:loc>
+      <image:caption>Funanani Netshifhefhe - Portfolio Profile Picture</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://funifrank67-coder.github.io/funihh-portfolio/images/pic1.jpeg</image:loc>
+      <image:caption>Funanani Netshifhefhe - Computer Science student Portfolio </image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://funifrank67-coder.github.io/funihh-portfolio/images/pic3.jpeg</image:loc>
+      <image:caption>Funanani Netshifhefhe standing at home</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://funifrank67-coder.github.io/funihh-portfolio/images/project1.jpeg</image:loc>
+      <image:caption>Cs Study hub created by Funanani Netshifhefhe - Desktop view</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://funifrank67-coder.github.io/funihh-portfolio/images/project2.jpeg</image:loc>
+      <image:caption>Funanani Netshifhefhe coding in Java</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://funifrank67-coder.github.io/funihh-portfolio/images/project3.jpeg</image:loc>
+      <image:caption>Cs Study Hub - mobile view</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://funifrank67-coder.github.io/funihh-portfolio/images/project4.jpeg</image:loc>
+      <image:caption>Digital Literacy Certificate awarded by NEMISA NPC to Funanani Netshifhefhe</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://funifrank67-coder.github.io/funihh-portfolio/images/project5.jpeg</image:loc>
+      <image:caption>Funanani Netshifhefhe - Microsoft 101 Certificate from NEMISA NPC</image:caption>
+    </image:image>
+
   </url>
 
 </urlset>
