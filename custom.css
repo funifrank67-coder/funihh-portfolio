@@ -259,7 +259,7 @@ header .hero-btn.ghost:hover {
   transform: translateY(-4px);
 }
 
-/* ---------- Navbar ---------- */
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
