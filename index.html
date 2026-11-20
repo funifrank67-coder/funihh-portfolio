@@ -39,7 +39,8 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 <meta name="google-site-verification" content="I4Qt91L1WDZPlanw6gZQCw0IV8rONT2wvukr42f18sA" />
 </head>
 <body class="w3-black">
-
+<div id="progressBar"></div>
+  
 <nav class="site-nav" id="siteNav">
   <div class="nav-inner">
     <a href="#home" class="nav-brand">Funihh<span>.</span></a>
@@ -66,6 +67,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   </h1>
 
   <p class="hero-tagline">Computer Science student building real websites and apps.</p>
+  <p class="typing-line"><span id="typed"></span><span class="cursor"></span></p>
   <p class="hero-sub">I love taking a cool idea and turning it into something that works.</p>
 
   <div class="hero-actions">
@@ -349,6 +351,65 @@ Ha-Lambani | Limpopo | South Africa
   );
 
   sections.forEach((s) => observer.observe(s));
+</script>
+
+  <script>
+  /* Scroll progress bar */
+  const bar = document.getElementById("progressBar");
+  window.addEventListener("scroll", () => {
+    const h = document.documentElement;
+    const pct = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+    bar.style.width = pct + "%";
+  });
+
+  /* Fade-in on scroll */
+  const revealItems = document.querySelectorAll(
+    "#about h2, #about h3, #about .w3-row, #about ul.w3-ul, #photos h2, #photos .w3-half, #contact h2, #contact form"
+  );
+  revealItems.forEach((el) => el.classList.add("reveal"));
+
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.12 }
+  );
+  revealItems.forEach((el) => revealObserver.observe(el));
+
+  /* Typing effect */
+  const words = ["Web Developer", "Software Developer", "Data Scientist"];
+  const typed = document.getElementById("typed");
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  if (reduceMotion) {
+    typed.textContent = words.join(" · ");
+  } else {
+    let w = 0, c = 0, deleting = false;
+    function type() {
+      const word = words[w];
+      typed.textContent = word.substring(0, c);
+      if (!deleting && c < word.length) {
+        c++;
+        setTimeout(type, 90);
+      } else if (!deleting) {
+        deleting = true;
+        setTimeout(type, 1400);
+      } else if (c > 0) {
+        c--;
+        setTimeout(type, 45);
+      } else {
+        deleting = false;
+        w = (w + 1) % words.length;
+        setTimeout(type, 300);
+      }
+    }
+    type();
+  }
 </script>
 
 </body>
