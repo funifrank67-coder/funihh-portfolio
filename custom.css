@@ -356,3 +356,58 @@ html {
   color: var(--accent);
   background: rgba(20, 184, 166, 0.12);
 }
+
+
+/* ---------- Progress bar ---------- */
+#progressBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0;
+  background: linear-gradient(90deg, #14b8a6, #818cf8);
+  z-index: 1100;
+}
+
+/* ---------- Fade-in on scroll ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ---------- Typing line ---------- */
+.typing-line {
+  min-height: 1.6em;
+  margin: 0 0 8px;
+  font-weight: 600;
+  color: var(--accent);
+}
+.cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1.1em;
+  margin-left: 3px;
+  vertical-align: text-bottom;
+  background: var(--accent);
+  animation: blink 1s steps(1) infinite;
+}
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* Respect people who turn off animations */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .cursor {
+    animation: none;
+  }
+}
