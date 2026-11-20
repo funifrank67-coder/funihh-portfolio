@@ -351,3 +351,8 @@ html {
     padding: 14px 12px;
   }
 }
+/* ---------- Active nav link ---------- */
+.nav-links a.active {
+  color: var(--accent);
+  background: rgba(20, 184, 166, 0.12);
+}
