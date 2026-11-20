@@ -1,1 +1,43 @@
+:root {
+  --bg: #0f1117;
+  --surface: #171a23;
+  --surface-2: #1f2330;
+  --text: #e6e8ee;
+  --muted: #9aa3b2;
+  --accent: #14b8a6;
+}
 
+body, h1, h2, h3, h4, h5, h6 {
+  font-family: "Inter", "Montserrat", sans-serif;
+}
+
+body.w3-black,
+header.w3-black {
+  background-color: var(--bg) !important;
+  color: var(--text);
+}
+
+/* Sidebar (desktop) */
+.w3-sidebar {
+  background: var(--surface) !important;
+}
+.w3-sidebar .w3-bar-item.w3-black {
+  background: transparent !important;
+  color: var(--accent) !important;
+}
+.w3-hover-black:hover {
+  background-color: var(--surface-2) !important;
+}
+
+/* Top bar (mobile) */
+#myNavbar .w3-bar {
+  background-color: var(--surface) !important;
+}
+
+/* Text colours */
+.w3-text-light-grey {
+  color: var(--text) !important;
+}
+.w3-text-grey {
+  color: var(--muted) !important;
+}
