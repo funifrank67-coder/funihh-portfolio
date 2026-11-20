@@ -113,7 +113,7 @@ ul.w3-ul.w3-white li.w3-dark-grey {
   transform: translateY(-2px);
 }
 
-/* CV buttons (they have inline styles, so !important is needed) */
+/* CV buttons */
 a[href$=".pdf"] {
   border-radius: 10px !important;
   font-weight: 600;
@@ -169,6 +169,91 @@ header img.w3-image {
 #photos img {
   border-radius: 14px;
   transition: transform 0.25s ease;
+}
+
+/* ---------- Hero ---------- */
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--accent);
+  background: rgba(20, 184, 166, 0.1);
+  border: 1px solid rgba(20, 184, 166, 0.3);
+  border-radius: 999px;
+}
+.hero-badge .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(20, 184, 166, 0.6); }
+  70%  { box-shadow: 0 0 0 8px rgba(20, 184, 166, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(20, 184, 166, 0); }
+}
+
+.hero-title {
+  font-size: clamp(2.2rem, 7vw, 4.2rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 20px 0 12px;
+}
+.gradient-text {
+  background: linear-gradient(90deg, #5eead4, #14b8a6, #818cf8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.hero-tagline {
+  font-size: clamp(1.05rem, 2.5vw, 1.35rem);
+  color: var(--text);
+  margin: 0 0 6px;
+}
+.hero-sub {
+  color: var(--muted);
+  margin: 0 0 24px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+.hero-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+.hero-btn:hover {
+  transform: translateY(-2px);
+}
+header .hero-btn.primary {
+  background: var(--accent);
+  color: #04201c !important;
+}
+header .hero-btn.primary:hover {
+  filter: brightness(1.1);
+}
+header .hero-btn.ghost {
+  background: transparent !important;
+  color: var(--text) !important;
+  border: 1px solid var(--border);
+}
+header .hero-btn.ghost:hover {
+  border-color: var(--accent);
 }
 #photos img:hover {
   transform: translateY(-4px);
