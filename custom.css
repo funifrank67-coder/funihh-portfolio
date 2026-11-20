@@ -41,3 +41,135 @@ header.w3-black {
 .w3-text-grey {
   color: var(--muted) !important;
 }
+
+/* ---------- card n boxes---------- */
+:root {
+  --border: rgba(255, 255, 255, 0.08);
+  --radius: 16px;
+}
+
+/* ---------- Skill bars ---------- */
+div.w3-white {
+  background-color: var(--surface-2) !important;
+  border-radius: 999px;
+  overflow: hidden;
+}
+div.w3-white > .w3-dark-grey {
+  height: 10px !important;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #0d9488, var(--accent)) !important;
+}
+
+/* ---------- Stats row ---------- */
+.w3-row.w3-light-grey {
+  background-color: var(--surface) !important;
+  color: var(--muted) !important;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.w3-row.w3-light-grey .w3-xlarge {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* ---------- Services cards ---------- */
+ul.w3-ul.w3-white {
+  background-color: var(--surface) !important;
+  color: var(--text) !important;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  opacity: 1 !important;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+ul.w3-ul.w3-white:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+}
+ul.w3-ul.w3-white li {
+  border-bottom: 1px solid var(--border);
+}
+ul.w3-ul.w3-white li:last-child {
+  border-bottom: none;
+}
+ul.w3-ul.w3-white li.w3-dark-grey {
+  background-color: var(--surface-2) !important;
+  color: var(--accent) !important;
+  font-weight: 600;
+}
+
+/* ---------- Buttons ---------- */
+.w3-button.w3-light-grey {
+  background-color: var(--accent) !important;
+  color: #04201c !important;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+.w3-button.w3-light-grey:hover {
+  background-color: var(--accent) !important;
+  color: #04201c !important;
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+}
+
+/* CV buttons (they have inline styles, so !important is needed) */
+a[href$=".pdf"] {
+  border-radius: 10px !important;
+  font-weight: 600;
+  transition: transform 0.2s ease;
+}
+a[href$=".pdf"][target="_blank"] {
+  background-color: transparent !important;
+  border: 1px solid var(--accent);
+  color: var(--accent) !important;
+}
+a[href$=".pdf"][download] {
+  background-color: var(--surface-2) !important;
+  color: var(--text) !important;
+  border: 1px solid var(--border);
+}
+a[href$=".pdf"]:hover {
+  transform: translateY(-2px);
+}
+
+/* WhatsApp button stays green, just rounded */
+.w3-button.w3-green {
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+/* ---------- Contact form ---------- */
+.w3-input {
+  background-color: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 16px !important;
+}
+.w3-input::placeholder {
+  color: var(--muted);
+}
+.w3-input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.2);
+}
+
+/* ---------- Images ---------- */
+header img.w3-image {
+  display: block;
+  width: 100%;
+  max-width: 340px;
+  height: auto;
+  margin: 24px auto 0;
+  border-radius: 24px;
+  border: 1px solid var(--border);
+}
+#photos img {
+  border-radius: 14px;
+  transition: transform 0.25s ease;
+}
+#photos img:hover {
+  transform: translateY(-4px);
+}
