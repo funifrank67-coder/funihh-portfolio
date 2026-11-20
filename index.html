@@ -327,6 +327,28 @@ Ha-Lambani | Limpopo | South Africa
     });
   });
 </script>
+ <!-- script for nav to light up-->
+  <script>
+  const sections = document.querySelectorAll("#home, #about, #photos, #contact");
+  const links = document.querySelectorAll(".nav-links a");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          links.forEach((l) => l.classList.remove("active"));
+          const active = document.querySelector(
+            `.nav-links a[href="#${entry.target.id}"]`
+          );
+          if (active) active.classList.add("active");
+        }
+      });
+    },
+    { rootMargin: "-40% 0px -55% 0px" }
+  );
+
+  sections.forEach((s) => observer.observe(s));
+</script>
 
 </body>
 </html>
